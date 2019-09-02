@@ -10,9 +10,9 @@ export class CloudService {
     // tslint:disable-next-line: max-line-length
     {
       url:
-        "https://ia801504.us.archive.org/3/items/EdSheeranPerfectOfficialMusicVideoListenVid.com/Ed_Sheeran_-_Perfect_Official_Music_Video%5BListenVid.com%5D.mp3",
-      name: "Perfect",
-      artist: " Ed Sheeran"
+        "https://api.soundcloud.com/tracks/654542027/download?client_id=BeGVhOrGmfboy1LtiHTQF6Ejpt9ULJCI",
+      name: "You. You're Bleeding...",
+      artist: "Psycho Panther"
     },
     {
       // tslint:disable-next-line: max-line-length

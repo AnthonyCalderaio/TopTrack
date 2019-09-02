@@ -1,17 +1,26 @@
+.container {
+    background-color: black
+}
+
 .container .main-toolbar .spacer {
-    flex: 1 1 auto;
+    flex: 1;
+    height: 100%;
+    background-color: orange;
+    position: relative;
+    object-fit: cover;
 }
 
 .container .main-toolbar .toolbar-btn {
     font-size: 16px;
     margin-right: 5px;
     cursor: pointer;
+    background-color: turquoise
 }
 
 .container .content .logo {
     margin: 2.5rem;
     text-align: center;
-    font-size: 24px;
+    font-size: 14px;
     color: #3f51b5;
 }
 
@@ -19,28 +28,46 @@
     height: 160px !important;
     width: 160px !important;
     font-size: 160px !important;
+    background-color: yellow
+}
+
+.container .songs {
+    background-color: aquamarine;
+    position: relative;
 }
 
 .container .media-footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+    /* background-color: red; */
+}
+
+.container-iphone-6 .media-footer-iphone-6 {
+    position: absolute;
+    width: 100vh;
+    background-color: blue;
 }
 
 .container .media-footer .time-slider {
     width: 100% !important;
     margin-left: 20px;
     margin-right: 20px;
+    background-color: pink;
 }
 
 .container .media-footer .media-action-bar {
     width: 100%;
     padding: 2.5rem;
     justify-content: center;
+    /* background-color: magenta; */
+    bottom: 0;
 }
 
 .container .media-footer .media-action-bar .mat-icon {
     height: 48px !important;
     width: 48px !important;
     font-size: 48px !important;
+    background-color: orange;
+    bottom: 0;
 }
