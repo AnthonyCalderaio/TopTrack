@@ -1,0 +1,9 @@
+.tab-bar {
+    background-color: blue;
+    display: flex;
+    justify-content: space-evenly;
+    border: 10px solid black;
+    color: white;
+    height: 50px;
+    font-size: 40px
+}
