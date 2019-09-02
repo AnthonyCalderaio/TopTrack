@@ -18,14 +18,14 @@ export class ListenComponentComponent implements OnInit {
     public cloudService: CloudService
   ) {
     // get media files
-    // cloudService.getFiles().subscribe(files => {
-    //   this.files = files;
-    // });
+    cloudService.getFiles().subscribe(files => {
+      this.files = files;
+    });
 
-    // // listen to stream state
-    // this.audioService.getState().subscribe(state => {
-    //   this.state = state;
-    // });
+    // listen to stream state
+    this.audioService.getState().subscribe(state => {
+      this.state = state;
+    });
 
 
   }
@@ -33,53 +33,53 @@ export class ListenComponentComponent implements OnInit {
   state: StreamState;
   currentFile: any = {};
 
-  // openFile(file, index) {
-  //   this.currentFile = { index, file };
-  //   this.audioService.stop();
-  //   this.playStream(file.url);
-  // }
+  openFile(file, index) {
+    this.currentFile = { index, file };
+    this.audioService.stop();
+    this.playStream(file.url);
+  }
 
-  // playStream(url) {
-  //   this.audioService.playStream(url).subscribe(events => {
-  //     // listening for fun here
-  //   });
-  // }
+  playStream(url) {
+    this.audioService.playStream(url).subscribe(events => {
+      // listening for fun here
+    });
+  }
 
-  // pause() {
-  //   this.audioService.pause();
-  // }
+  pause() {
+    this.audioService.pause();
+  }
 
-  // play() {
-  //   this.audioService.play();
-  // }
+  play() {
+    this.audioService.play();
+  }
 
-  // stop() {
-  //   this.audioService.stop();
-  // }
+  stop() {
+    this.audioService.stop();
+  }
 
-  // previous() {
-  //   const index = this.currentFile.index - 1;
-  //   const file = this.files[index];
-  //   this.openFile(file, index);
-  // }
+  previous() {
+    const index = this.currentFile.index - 1;
+    const file = this.files[index];
+    this.openFile(file, index);
+  }
 
-  // isFirstPlaying() {
-  //   return this.currentFile.index === 0;
-  // }
+  isFirstPlaying() {
+    return this.currentFile.index === 0;
+  }
 
-  // isLastPlaying() {
-  //   return this.currentFile.index === this.files.length - 1;
-  // }
+  isLastPlaying() {
+    return this.currentFile.index === this.files.length - 1;
+  }
 
-  // next() {
-  //   const index = this.currentFile.index + 1;
-  //   const file = this.files[index];
-  //   this.openFile(file, index);
-  // }
+  next() {
+    const index = this.currentFile.index + 1;
+    const file = this.files[index];
+    this.openFile(file, index);
+  }
 
-  // onSliderChangeEnd(change) {
-  //   this.audioService.seekTo(change.value);
-  // }
+  onSliderChangeEnd(change) {
+    this.audioService.seekTo(change.value);
+  }
 
   ngOnInit() {
     console.log('HELLO')
