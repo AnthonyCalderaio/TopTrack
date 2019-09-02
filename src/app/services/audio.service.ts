@@ -129,9 +129,9 @@ export class AudioService {
   }
 
 
-  // playStream(url) {
-  //   return this.streamObservable(url).pipe(takeUntil(this.stop$));
-  // }
+  playStream(url) {
+    return this.streamObservable(url).pipe(takeUntil(this.stop$));
+  }
 
   play() {
     this.audioObj.play();
